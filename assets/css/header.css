@@ -1,0 +1,48 @@
+.h-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 50px;
+    padding: 5px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black
+}
+
+.h-grouping {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.h-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+
+    gap: 20px;
+}
+
+.h-temp-img {
+    width: 50px;
+    height: 50px;
+    
+    border: 1px solid black;
+}
+
+.h-item-content {
+    display: flex;
+    
+    gap: 20px;
+}
+
+.h-login-a {
+    border: 2px solid black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+}

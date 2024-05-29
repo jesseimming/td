@@ -9,13 +9,7 @@ $dbuser = "root";
 $dbpass = "";
 $dbname = "td";
 
-/**
- * Voor de Windows gebruikers;
- */
-// $dbhost = "localhost";
-// $dbuser = "root";
-// $dbpass = "";
-// $dbname = "m41_deel1";
+
 
 $con = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 if ($con -> connect_errno) {

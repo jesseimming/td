@@ -19,29 +19,37 @@
         <?php
         include('core/database_connect.php');
 
-        include('functions/global-lib.php');
-        include('functions/login-check.php');
+        include('functions/global_lib.php');
+        include('functions/login_lib.php');
+        include('functions/login/is_logged_in.php');
+
+        debug();
 
         include('core/header.php');
+
         ?>
 
         <?php
-        $post_function = $_POST['f'];
-        if ($post_function) {
-            include("functions/{$post_function}.php");
-        }
+        // $has_arg = isset($_POST['f']);
+        // if ($has_arg) {
+        //     $post_function = $_POST['f'];
+        //     include("functions/{$post_function}.php");
+        // }
+
         ?>
 
         <?php
         // Redirect body to a php file
-        $redirect = $_GET['r'];
+        $has_redirect = isset($_GET['r']);
+        if ($has_redirect) {
+            $redirect = $_GET['r'];
 
-        if ($redirect) {
             include("view/{$redirect}.php");
         } else {
             $parseRedirect = 'home';
             include("view/{$parseRedirect}.php");
         }
+       
         ?>
 
 

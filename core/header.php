@@ -12,7 +12,13 @@
     </div>
 
     <div class="h-grouping">
-        <a href="./?r=login" class="h-login-a normalize-a">Login</a>
+        <a href="./?r=login" class="h-login-a normalize-a"><?php
+        if ($is_logged_in) {
+            echo "Logout";
+        } else {
+            echo "Login";
+        }
+        ?></a>
     </div>
 
 </nav>
